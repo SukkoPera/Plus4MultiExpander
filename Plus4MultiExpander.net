@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/Plus4MultiExpander/Plus4MultiExpander.sch)
-    (date "Sat 29 Jul 2023 16:30:34 CEST")
+    (date "Sat 29 Jul 2023 23:02:03 CEST")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -26,6 +26,8 @@
       (value C16_NEWSTYLE_EXP_PORT_1)
       (footprint Plus4MultiExpander:C64-Cart-Socket-Vertical)
       (datasheet DOCUMENTATION)
+      (fields
+        (field (name MouserPN) 571-5530843-4))
       (libsource (lib C64-Exp-Port) (part C16_NEWSTYLE_EXP_PORT) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 650D18C1))
@@ -82,6 +84,8 @@
       (value C16_NEWSTYLE_EXP_PORT_3)
       (footprint Plus4MultiExpander:C64-Cart-Socket-Vertical)
       (datasheet DOCUMENTATION)
+      (fields
+        (field (name MouserPN) 571-5530843-4))
       (libsource (lib C64-Exp-Port) (part C16_NEWSTYLE_EXP_PORT) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 64C689DA))
@@ -89,6 +93,8 @@
       (value C16_NEWSTYLE_EXP_PORT_2)
       (footprint Plus4MultiExpander:C64-Cart-Socket-Vertical)
       (datasheet DOCUMENTATION)
+      (fields
+        (field (name MouserPN) 571-5530843-4))
       (libsource (lib C64-Exp-Port) (part C16_NEWSTYLE_EXP_PORT) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 64C834AA)))
