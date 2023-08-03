@@ -5,11 +5,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Plus4MultiExpander"
-Date "2023-07-26"
+Date "2023-08-03"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Inspired by Solder/Synergy's Expansionport-Splitter"
-Comment2 ""
+Comment2 "Licensed under CC BY-NC-SA 4.0"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -1388,6 +1388,32 @@ Text Label 3475 6765 2    50   ~ 0
 ba0
 Text Notes 9710 4580 0    50   ~ 0
 C2 CREATION
+$Comp
+L power:+5V #PWR018
+U 1 1 66854472
+P 10245 2750
+F 0 "#PWR018" H 10245 2600 50  0001 C CNN
+F 1 "+5V" H 10260 2923 50  0000 C CNN
+F 2 "" H 10245 2750 50  0001 C CNN
+F 3 "" H 10245 2750 50  0001 C CNN
+	1    10245 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10245 2750 10245 2860
+Wire Wire Line
+	10245 3160 10245 3270
+$Comp
+L power:GND #PWR019
+U 1 1 6685447E
+P 10245 3270
+F 0 "#PWR019" H 10245 3020 50  0001 C CNN
+F 1 "GND" H 10250 3097 50  0000 C CNN
+F 2 "" H 10245 3270 50  0001 C CNN
+F 3 "" H 10245 3270 50  0001 C CNN
+	1    10245 3270
+	-1   0    0    -1  
+$EndComp
 Wire Bus Line
 	1045 2645 1045 3345
 Wire Bus Line
@@ -1396,4 +1422,26 @@ Wire Bus Line
 	4075 5865 4075 6565
 Wire Bus Line
 	1045 5865 1045 6565
+$Comp
+L Device:CP1 C3
+U 1 1 66870BF0
+P 10245 3010
+F 0 "C3" H 10360 3056 50  0000 L CNN
+F 1 "220u" H 10360 2965 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 10245 3010 50  0001 C CNN
+F 3 "~" H 10245 3010 50  0001 C CNN
+	1    10245 3010
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V0
+U 1 1 66878EB4
+P 6540 7655
+F 0 "V0" H 6618 7701 50  0000 L CNN
+F 1 "LICENSE" H 6618 7610 50  0000 L CNN
+F 2 "Plus4MultiExpander:cc_by_nc_sa" H 6540 7655 50  0001 C CNN
+F 3 "" H 6540 7655 50  0001 C CNN
+	1    6540 7655
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
