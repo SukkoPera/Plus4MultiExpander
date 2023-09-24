@@ -171,7 +171,7 @@ Wire Wire Line
 Text Label 1145 1545 0    50   ~ 0
 ~irq
 Text Label 1145 1645 0    50   ~ 0
-r_~w
+r_~w~_in
 Text Label 1145 1745 0    50   ~ 0
 ~c1hi_in
 Text Label 1145 1845 0    50   ~ 0
@@ -205,7 +205,7 @@ Text Label 3475 1445 2    50   ~ 0
 Text Label 3475 1545 2    50   ~ 0
 ~ras
 Text Label 3475 1645 2    50   ~ 0
-phi0_in
+phi0
 Wire Wire Line
 	3145 1845 3475 1845
 Wire Wire Line
@@ -1540,12 +1540,12 @@ $EndComp
 $Comp
 L 74xx:74LS08 U3
 U 2 1 65AB918C
-P 10225 5195
-F 0 "U3" H 10225 5520 50  0000 C CNN
-F 1 "74HCT08" H 10225 5429 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 10225 5195 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10225 5195 50  0001 C CNN
-	2    10225 5195
+P 10225 5760
+F 0 "U3" H 10225 6085 50  0000 C CNN
+F 1 "74HCT08" H 10225 5994 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 10225 5760 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10225 5760 50  0001 C CNN
+	2    10225 5760
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1562,12 +1562,12 @@ $EndComp
 $Comp
 L 74xx:74LS08 U3
 U 4 1 65ABD51B
-P 10225 5760
-F 0 "U3" H 10225 6085 50  0000 C CNN
-F 1 "74HCT08" H 10225 5994 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 10225 5760 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10225 5760 50  0001 C CNN
-	4    10225 5760
+P 10225 5195
+F 0 "U3" H 10225 5520 50  0000 C CNN
+F 1 "74HCT08" H 10225 5429 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 10225 5195 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10225 5195 50  0001 C CNN
+	4    10225 5195
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1616,7 +1616,7 @@ Wire Wire Line
 Text Label 10705 4615 2    50   ~ 0
 ~c1lo
 Text Label 9440 5760 0    50   ~ 0
-phi0_in
+r_~w~_in
 Wire Wire Line
 	9925 5660 9845 5660
 Wire Wire Line
@@ -1631,7 +1631,7 @@ Wire Wire Line
 Wire Wire Line
 	10525 5760 10705 5760
 Text Label 10705 5760 2    50   ~ 0
-phi0
+r_~w
 Text Notes 9805 4185 0    50   ~ 0
 SIGNAL BUFFERING
 Text Notes 9220 6370 0    50   ~ 0
