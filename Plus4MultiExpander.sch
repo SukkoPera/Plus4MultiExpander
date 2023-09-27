@@ -1350,7 +1350,7 @@ U 1 1 66870BF0
 P 9410 1595
 F 0 "C3" H 9295 1641 50  0000 R CNN
 F 1 "220u" H 9295 1550 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 9410 1595 50  0001 C CNN
+F 2 "Plus4MultiExpander:CP_Radial_L11.5mm_D8.0mm_P3.5mm_Horizontal" H 9410 1595 50  0001 C CNN
 F 3 "~" H 9410 1595 50  0001 C CNN
 	1    9410 1595
 	1    0    0    -1  

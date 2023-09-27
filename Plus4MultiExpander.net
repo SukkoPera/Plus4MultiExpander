@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/Plus4MultiExpander/Plus4MultiExpander.sch)
-    (date "Sun 24 Sep 2023 23:33:40 CEST")
+    (date "Mon 25 Sep 2023 00:12:48 CEST")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -79,7 +79,7 @@
       (tstamp 64C834AA))
     (comp (ref C3)
       (value 220u)
-      (footprint Capacitor_THT:CP_Radial_D8.0mm_P3.50mm)
+      (footprint Plus4MultiExpander:CP_Radial_L11.5mm_D8.0mm_P3.5mm_Horizontal)
       (datasheet ~)
       (libsource (lib Device) (part CP1) (description "Polarized capacitor, US symbol"))
       (sheetpath (names /) (tstamps /))
