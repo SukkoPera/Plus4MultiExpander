@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Plus4MultiExpander"
-Date "2023-09-24"
+Date "2023-09-29"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Inspired by Solder/Synergy's Expansionport-Splitter"
@@ -306,12 +306,6 @@ F 3 "" H 4175 1065 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4675 2345 4175 2345
-Wire Wire Line
-	4675 2445 4175 2445
-Wire Wire Line
-	4675 2545 4175 2545
-Wire Wire Line
 	4675 2645 4175 2645
 Wire Wire Line
 	4675 2745 4175 2745
@@ -321,6 +315,18 @@ Wire Wire Line
 	4675 2945 4175 2945
 Wire Wire Line
 	4675 3045 4175 3045
+Wire Wire Line
+	4675 3145 4175 3145
+Wire Wire Line
+	4675 3245 4175 3245
+Wire Wire Line
+	4675 3345 4175 3345
+Entry Wire Line
+	4075 3445 4175 3345
+Entry Wire Line
+	4075 3345 4175 3245
+Entry Wire Line
+	4075 3245 4175 3145
 Entry Wire Line
 	4075 3145 4175 3045
 Entry Wire Line
@@ -331,39 +337,33 @@ Entry Wire Line
 	4075 2845 4175 2745
 Entry Wire Line
 	4075 2745 4175 2645
-Entry Wire Line
-	4075 2645 4175 2545
-Entry Wire Line
-	4075 2545 4175 2445
-Entry Wire Line
-	4075 2445 4175 2345
 Wire Bus Line
-	4075 3145 3730 3145
-Text Label 3730 3145 0    50   ~ 0
+	4075 3445 3730 3445
+Text Label 3730 3445 0    50   ~ 0
 d[0..7]
-Text Label 4175 2345 0    50   ~ 0
-d7
-Text Label 4175 2445 0    50   ~ 0
-d6
-Text Label 4175 2545 0    50   ~ 0
-d5
 Text Label 4175 2645 0    50   ~ 0
-d4
+d7
 Text Label 4175 2745 0    50   ~ 0
-d3
+d6
 Text Label 4175 2845 0    50   ~ 0
-d2
+d5
 Text Label 4175 2945 0    50   ~ 0
-d1
+d4
 Text Label 4175 3045 0    50   ~ 0
+d3
+Text Label 4175 3145 0    50   ~ 0
+d2
+Text Label 4175 3245 0    50   ~ 0
+d1
+Text Label 4175 3345 0    50   ~ 0
 d0
 Wire Wire Line
-	4675 3145 4175 3145
+	4675 2045 4175 2045
 Wire Wire Line
-	4675 3345 4175 3345
-Text Label 4175 3145 0    50   ~ 0
+	4675 2345 4175 2345
+Text Label 4175 2045 0    50   ~ 0
 aec
-Text Label 4175 3345 0    50   ~ 0
+Text Label 4175 1845 0    50   ~ 0
 phi2
 Wire Wire Line
 	4675 1645 4175 1645
@@ -374,24 +374,24 @@ Wire Wire Line
 Wire Wire Line
 	4675 1945 4175 1945
 Wire Wire Line
-	4675 2045 4175 2045
-Wire Wire Line
-	4675 2145 4175 2145
-Wire Wire Line
 	4675 2245 4175 2245
+Wire Wire Line
+	4675 2545 4175 2545
+Wire Wire Line
+	4675 2445 4175 2445
 Text Label 4175 1645 0    50   ~ 0
 ~irq
 Text Label 4175 1745 0    50   ~ 0
 r_~w
-Text Label 4175 1845 0    50   ~ 0
+Text Label 4175 2345 0    50   ~ 0
 ~c1hi
 Text Label 4175 1945 0    50   ~ 0
 ~cs1
-Text Label 4175 2045 0    50   ~ 0
-~cs0
-Text Label 4175 2145 0    50   ~ 0
-mux
 Text Label 4175 2245 0    50   ~ 0
+~cs0
+Text Label 4175 2545 0    50   ~ 0
+mux
+Text Label 4175 2445 0    50   ~ 0
 ba
 $Comp
 L power:GND #PWR06
@@ -851,116 +851,6 @@ Wire Wire Line
 Connection ~ 4590 6865
 Wire Wire Line
 	4590 6865 4590 7185
-Wire Wire Line
-	4675 4865 4175 4865
-Wire Wire Line
-	4175 4865 4175 4485
-Wire Wire Line
-	4675 4965 4175 4965
-Wire Wire Line
-	4175 4965 4175 4865
-Connection ~ 4175 4865
-$Comp
-L power:+5V #PWR015
-U 1 1 64C68CC0
-P 4175 4485
-F 0 "#PWR015" H 4175 4335 50  0001 C CNN
-F 1 "+5V" H 4190 4658 50  0000 C CNN
-F 2 "" H 4175 4485 50  0001 C CNN
-F 3 "" H 4175 4485 50  0001 C CNN
-	1    4175 4485
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4675 5765 4175 5765
-Wire Wire Line
-	4675 5865 4175 5865
-Wire Wire Line
-	4675 5965 4175 5965
-Wire Wire Line
-	4675 6065 4175 6065
-Wire Wire Line
-	4675 6165 4175 6165
-Wire Wire Line
-	4675 6265 4175 6265
-Wire Wire Line
-	4675 6365 4175 6365
-Wire Wire Line
-	4675 6465 4175 6465
-Entry Wire Line
-	4075 6565 4175 6465
-Entry Wire Line
-	4075 6465 4175 6365
-Entry Wire Line
-	4075 6365 4175 6265
-Entry Wire Line
-	4075 6265 4175 6165
-Entry Wire Line
-	4075 6165 4175 6065
-Entry Wire Line
-	4075 6065 4175 5965
-Entry Wire Line
-	4075 5965 4175 5865
-Entry Wire Line
-	4075 5865 4175 5765
-Wire Bus Line
-	4075 6565 3730 6565
-Text Label 3730 6565 0    50   ~ 0
-d[0..7]
-Text Label 4175 5765 0    50   ~ 0
-d7
-Text Label 4175 5865 0    50   ~ 0
-d6
-Text Label 4175 5965 0    50   ~ 0
-d5
-Text Label 4175 6065 0    50   ~ 0
-d4
-Text Label 4175 6165 0    50   ~ 0
-d3
-Text Label 4175 6265 0    50   ~ 0
-d2
-Text Label 4175 6365 0    50   ~ 0
-d1
-Text Label 4175 6465 0    50   ~ 0
-d0
-Wire Wire Line
-	4675 6565 4175 6565
-Wire Wire Line
-	4675 6665 4175 6665
-Wire Wire Line
-	4675 6765 4175 6765
-Text Label 4175 6565 0    50   ~ 0
-aec
-Text Label 4175 6765 0    50   ~ 0
-phi2
-Wire Wire Line
-	4675 5065 4175 5065
-Wire Wire Line
-	4675 5165 4175 5165
-Wire Wire Line
-	4675 5265 4175 5265
-Wire Wire Line
-	4675 5365 4175 5365
-Wire Wire Line
-	4675 5465 4175 5465
-Wire Wire Line
-	4675 5565 4175 5565
-Wire Wire Line
-	4675 5665 4175 5665
-Text Label 4175 5065 0    50   ~ 0
-~irq
-Text Label 4175 5165 0    50   ~ 0
-r_~w
-Text Label 4175 5265 0    50   ~ 0
-~c1hi
-Text Label 4175 5365 0    50   ~ 0
-~cs1
-Text Label 4175 5465 0    50   ~ 0
-~cs0
-Text Label 4175 5565 0    50   ~ 0
-mux
-Text Label 4175 5665 0    50   ~ 0
-ba
 $Comp
 L power:GND #PWR016
 U 1 1 64C68CF8
@@ -1093,114 +983,6 @@ Wire Wire Line
 Connection ~ 1560 6865
 Wire Wire Line
 	1560 6865 1560 7185
-Wire Wire Line
-	1645 4865 1145 4865
-Wire Wire Line
-	1145 4865 1145 4485
-Wire Wire Line
-	1645 4965 1145 4965
-Wire Wire Line
-	1145 4965 1145 4865
-Connection ~ 1145 4865
-$Comp
-L power:+5V #PWR012
-U 1 1 64C8381C
-P 1145 4485
-F 0 "#PWR012" H 1145 4335 50  0001 C CNN
-F 1 "+5V" H 1160 4658 50  0000 C CNN
-F 2 "" H 1145 4485 50  0001 C CNN
-F 3 "" H 1145 4485 50  0001 C CNN
-	1    1145 4485
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1645 5765 1145 5765
-Wire Wire Line
-	1645 5865 1145 5865
-Wire Wire Line
-	1645 5965 1145 5965
-Wire Wire Line
-	1645 6065 1145 6065
-Wire Wire Line
-	1645 6165 1145 6165
-Wire Wire Line
-	1645 6265 1145 6265
-Wire Wire Line
-	1645 6365 1145 6365
-Wire Wire Line
-	1645 6465 1145 6465
-Entry Wire Line
-	1045 6565 1145 6465
-Entry Wire Line
-	1045 6465 1145 6365
-Entry Wire Line
-	1045 6365 1145 6265
-Entry Wire Line
-	1045 6265 1145 6165
-Entry Wire Line
-	1045 6165 1145 6065
-Entry Wire Line
-	1045 6065 1145 5965
-Entry Wire Line
-	1045 5965 1145 5865
-Entry Wire Line
-	1045 5865 1145 5765
-Wire Bus Line
-	1045 6565 700  6565
-Text Label 700  6565 0    50   ~ 0
-d[0..7]
-Text Label 1145 5765 0    50   ~ 0
-d7
-Text Label 1145 5865 0    50   ~ 0
-d6
-Text Label 1145 5965 0    50   ~ 0
-d5
-Text Label 1145 6065 0    50   ~ 0
-d4
-Text Label 1145 6165 0    50   ~ 0
-d3
-Text Label 1145 6265 0    50   ~ 0
-d2
-Text Label 1145 6365 0    50   ~ 0
-d1
-Text Label 1145 6465 0    50   ~ 0
-d0
-Wire Wire Line
-	1645 6565 1145 6565
-Wire Wire Line
-	1645 6765 1145 6765
-Text Label 1145 6565 0    50   ~ 0
-aec
-Text Label 1145 6765 0    50   ~ 0
-phi2
-Wire Wire Line
-	1645 5065 1145 5065
-Wire Wire Line
-	1645 5165 1145 5165
-Wire Wire Line
-	1645 5265 1145 5265
-Wire Wire Line
-	1645 5365 1145 5365
-Wire Wire Line
-	1645 5465 1145 5465
-Wire Wire Line
-	1645 5565 1145 5565
-Wire Wire Line
-	1645 5665 1145 5665
-Text Label 1145 5065 0    50   ~ 0
-~irq
-Text Label 1145 5165 0    50   ~ 0
-r_~w
-Text Label 1145 5265 0    50   ~ 0
-~c1hi
-Text Label 1145 5365 0    50   ~ 0
-~cs1
-Text Label 1145 5465 0    50   ~ 0
-~cs0
-Text Label 1145 5565 0    50   ~ 0
-mux
-Text Label 1145 5665 0    50   ~ 0
-ba
 $Comp
 L power:GND #PWR013
 U 1 1 64C83854
@@ -1475,56 +1257,24 @@ F 3 "" H 5145 7475 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5145 7475 5145 7395
-Text Label 485  6665 0    50   ~ 0
+Wire Wire Line
+	4675 2145 4175 2145
+Text Label 3515 2145 0    50   ~ 0
 ext_audio
 Wire Wire Line
-	845  6665 485  6665
-Wire Wire Line
-	1145 6665 1645 6665
-$Comp
-L Device:R R2
-U 1 1 6697BA48
-P 995 6665
-F 0 "R2" V 1110 6665 50  0000 C CNN
-F 1 "1k" V 1201 6665 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 925 6665 50  0001 C CNN
-F 3 "~" H 995 6665 50  0001 C CNN
-	1    995  6665
-	0    1    1    0   
-$EndComp
-Text Label 3515 6665 0    50   ~ 0
-ext_audio
-Wire Wire Line
-	3875 6665 3515 6665
-$Comp
-L Device:R R3
-U 1 1 66A6E8E3
-P 4025 6665
-F 0 "R3" V 4140 6665 50  0000 C CNN
-F 1 "1k" V 4231 6665 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3955 6665 50  0001 C CNN
-F 3 "~" H 4025 6665 50  0001 C CNN
-	1    4025 6665
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4675 3245 4175 3245
-Text Label 3515 3245 0    50   ~ 0
-ext_audio
-Wire Wire Line
-	3875 3245 3515 3245
+	3875 2145 3515 2145
 $Comp
 L Device:R R1
 U 1 1 66ACA4E9
-P 4025 3245
-F 0 "R1" V 4140 3245 50  0000 C CNN
-F 1 "1k" V 4231 3245 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3955 3245 50  0001 C CNN
-F 3 "~" H 4025 3245 50  0001 C CNN
-	1    4025 3245
+P 4025 2145
+F 0 "R1" V 4140 2145 50  0000 C CNN
+F 1 "1k" V 4231 2145 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3955 2145 50  0001 C CNN
+F 3 "~" H 4025 2145 50  0001 C CNN
+	1    4025 2145
 	0    1    1    0   
 $EndComp
-Text Notes 4375 3830 2    50   ~ 0
+Text Notes 4105 2040 2    28   ~ 0
 These resistors form a\nrough mixing circuit, in\ncase several cards output\naudio at the same time
 $Comp
 L 74xx:74LS08 U3
@@ -1636,12 +1386,262 @@ Text Notes 9805 4185 0    50   ~ 0
 SIGNAL BUFFERING
 Text Notes 9220 6370 0    50   ~ 0
 We had 3 spare gates so let's make some\nuse of them. The buffered signals were\nmainly chosen because they were "easy"\nto route to the gates.
+Wire Wire Line
+	1645 4865 1145 4865
+Wire Wire Line
+	1145 4865 1145 4485
+Wire Wire Line
+	1645 4965 1145 4965
+Wire Wire Line
+	1145 4965 1145 4865
+Connection ~ 1145 4865
+$Comp
+L power:+5V #PWR0105
+U 1 1 6615FC45
+P 1145 4485
+F 0 "#PWR0105" H 1145 4335 50  0001 C CNN
+F 1 "+5V" H 1160 4658 50  0000 C CNN
+F 2 "" H 1145 4485 50  0001 C CNN
+F 3 "" H 1145 4485 50  0001 C CNN
+	1    1145 4485
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1645 6065 1145 6065
+Wire Wire Line
+	1645 6165 1145 6165
+Wire Wire Line
+	1645 6265 1145 6265
+Wire Wire Line
+	1645 6365 1145 6365
+Wire Wire Line
+	1645 6465 1145 6465
+Wire Wire Line
+	1645 6565 1145 6565
+Wire Wire Line
+	1645 6665 1145 6665
+Wire Wire Line
+	1645 6765 1145 6765
+Entry Wire Line
+	1045 6865 1145 6765
+Entry Wire Line
+	1045 6765 1145 6665
+Entry Wire Line
+	1045 6665 1145 6565
+Entry Wire Line
+	1045 6565 1145 6465
+Entry Wire Line
+	1045 6465 1145 6365
+Entry Wire Line
+	1045 6365 1145 6265
+Entry Wire Line
+	1045 6265 1145 6165
+Entry Wire Line
+	1045 6165 1145 6065
+Wire Bus Line
+	1045 6865 700  6865
+Text Label 700  6865 0    50   ~ 0
+d[0..7]
+Text Label 1145 6065 0    50   ~ 0
+d7
+Text Label 1145 6165 0    50   ~ 0
+d6
+Text Label 1145 6265 0    50   ~ 0
+d5
+Text Label 1145 6365 0    50   ~ 0
+d4
+Text Label 1145 6465 0    50   ~ 0
+d3
+Text Label 1145 6565 0    50   ~ 0
+d2
+Text Label 1145 6665 0    50   ~ 0
+d1
+Text Label 1145 6765 0    50   ~ 0
+d0
+Wire Wire Line
+	1645 5465 1145 5465
+Wire Wire Line
+	1645 5765 1145 5765
+Text Label 1145 5465 0    50   ~ 0
+aec
+Text Label 1145 5265 0    50   ~ 0
+phi2
+Wire Wire Line
+	1645 5065 1145 5065
+Wire Wire Line
+	1645 5165 1145 5165
+Wire Wire Line
+	1645 5265 1145 5265
+Wire Wire Line
+	1645 5365 1145 5365
+Wire Wire Line
+	1645 5665 1145 5665
+Wire Wire Line
+	1645 5965 1145 5965
+Wire Wire Line
+	1645 5865 1145 5865
+Text Label 1145 5065 0    50   ~ 0
+~irq
+Text Label 1145 5165 0    50   ~ 0
+r_~w
+Text Label 1145 5765 0    50   ~ 0
+~c1hi
+Text Label 1145 5365 0    50   ~ 0
+~cs1
+Text Label 1145 5665 0    50   ~ 0
+~cs0
+Text Label 1145 5965 0    50   ~ 0
+mux
+Text Label 1145 5865 0    50   ~ 0
+ba
+Wire Wire Line
+	1645 5565 1145 5565
+Text Label 485  5565 0    50   ~ 0
+ext_audio
+Wire Wire Line
+	845  5565 485  5565
+$Comp
+L Device:R R2
+U 1 1 6615FC7E
+P 995 5565
+F 0 "R2" V 1110 5565 50  0000 C CNN
+F 1 "1k" V 1201 5565 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 925 5565 50  0001 C CNN
+F 3 "~" H 995 5565 50  0001 C CNN
+	1    995  5565
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4675 4865 4175 4865
+Wire Wire Line
+	4175 4865 4175 4485
+Wire Wire Line
+	4675 4965 4175 4965
+Wire Wire Line
+	4175 4965 4175 4865
+Connection ~ 4175 4865
+$Comp
+L power:+5V #PWR0106
+U 1 1 6617EFB4
+P 4175 4485
+F 0 "#PWR0106" H 4175 4335 50  0001 C CNN
+F 1 "+5V" H 4190 4658 50  0000 C CNN
+F 2 "" H 4175 4485 50  0001 C CNN
+F 3 "" H 4175 4485 50  0001 C CNN
+	1    4175 4485
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 6065 4175 6065
+Wire Wire Line
+	4675 6165 4175 6165
+Wire Wire Line
+	4675 6265 4175 6265
+Wire Wire Line
+	4675 6365 4175 6365
+Wire Wire Line
+	4675 6465 4175 6465
+Wire Wire Line
+	4675 6565 4175 6565
+Wire Wire Line
+	4675 6665 4175 6665
+Wire Wire Line
+	4675 6765 4175 6765
+Entry Wire Line
+	4075 6865 4175 6765
+Entry Wire Line
+	4075 6765 4175 6665
+Entry Wire Line
+	4075 6665 4175 6565
+Entry Wire Line
+	4075 6565 4175 6465
+Entry Wire Line
+	4075 6465 4175 6365
+Entry Wire Line
+	4075 6365 4175 6265
+Entry Wire Line
+	4075 6265 4175 6165
+Entry Wire Line
+	4075 6165 4175 6065
+Wire Bus Line
+	4075 6865 3730 6865
+Text Label 3730 6865 0    50   ~ 0
+d[0..7]
+Text Label 4175 6065 0    50   ~ 0
+d7
+Text Label 4175 6165 0    50   ~ 0
+d6
+Text Label 4175 6265 0    50   ~ 0
+d5
+Text Label 4175 6365 0    50   ~ 0
+d4
+Text Label 4175 6465 0    50   ~ 0
+d3
+Text Label 4175 6565 0    50   ~ 0
+d2
+Text Label 4175 6665 0    50   ~ 0
+d1
+Text Label 4175 6765 0    50   ~ 0
+d0
+Wire Wire Line
+	4675 5465 4175 5465
+Wire Wire Line
+	4675 5765 4175 5765
+Text Label 4175 5465 0    50   ~ 0
+aec
+Text Label 4175 5265 0    50   ~ 0
+phi2
+Wire Wire Line
+	4675 5065 4175 5065
+Wire Wire Line
+	4675 5165 4175 5165
+Wire Wire Line
+	4675 5265 4175 5265
+Wire Wire Line
+	4675 5365 4175 5365
+Wire Wire Line
+	4675 5665 4175 5665
+Wire Wire Line
+	4675 5965 4175 5965
+Wire Wire Line
+	4675 5865 4175 5865
+Text Label 4175 5065 0    50   ~ 0
+~irq
+Text Label 4175 5165 0    50   ~ 0
+r_~w
+Text Label 4175 5765 0    50   ~ 0
+~c1hi
+Text Label 4175 5365 0    50   ~ 0
+~cs1
+Text Label 4175 5665 0    50   ~ 0
+~cs0
+Text Label 4175 5965 0    50   ~ 0
+mux
+Text Label 4175 5865 0    50   ~ 0
+ba
+Wire Wire Line
+	4675 5565 4175 5565
+Text Label 3515 5565 0    50   ~ 0
+ext_audio
+Wire Wire Line
+	3875 5565 3515 5565
+$Comp
+L Device:R R3
+U 1 1 6617EFED
+P 4025 5565
+F 0 "R3" V 4140 5565 50  0000 C CNN
+F 1 "1k" V 4231 5565 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3955 5565 50  0001 C CNN
+F 3 "~" H 4025 5565 50  0001 C CNN
+	1    4025 5565
+	0    1    1    0   
+$EndComp
 Wire Bus Line
 	1045 2645 1045 3345
 Wire Bus Line
-	4075 2445 4075 3145
+	4075 2745 4075 3445
 Wire Bus Line
-	4075 5865 4075 6565
+	1045 6165 1045 6865
 Wire Bus Line
-	1045 5865 1045 6565
+	4075 6165 4075 6865
 $EndSCHEMATC
