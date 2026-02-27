@@ -4,7 +4,7 @@ Plus4MultiExpander is a port expander that allows multiple boards to be connecte
 ![Board](https://raw.githubusercontent.com/SukkoPera/Plus4MultiExpander/master/img/render-top.png)
 
 ## Summary
-The main problem in making an Expansion port extender for the 264 line of computers is the complete unavailability of the original connector: these machines use a 50-pin connector with 2.00 mm pitch, which is nowhere to be found. This has been a problem since the old days, as you can see that even Solder of Synergy used different connectors when he made his [Expansion port Splitter](https://plus4world.powweb.com/hardware/Expansionport_Splitter) in 1994. He used 50-pin connectors with 2.54 mm pitch, which in turn became rather uncommon in the following years, until they recently resurfaced from Chinese sellers.
+The main problem in making an Expansion port extender for the 264 line of computers is the complete unavailability of the original connector: these machines use a 50-pin connector with 2.00 mm pitch, which is nowhere to be found. This has been a problem since the old days, as you can see that even Solder of Synergy used different connectors when he made his [Expansion Port Splitter](https://plus4world.powweb.com/hardware/Expansionport_Splitter) in 1994. He used 50-pin connectors with 2.54 mm pitch, which in turn became rather uncommon in the following years, until they recently resurfaced from Chinese sellers.
 
 This problem with the unavailability of the connector also affects [LittleSixteen](https://github.com/SukkoPera/LittleSixteen). Since one of the goals of that project is to fit into an unmodified C64-style case, Solder's connector of choice wouldn't help, as it is much larger than the opening on the case.
 
@@ -51,7 +51,7 @@ Since multiple audio cards might be plugged into the expander, sending their out
 This is constituted by resistors R1/R2/R3 and unfortunately it might have the side effect of lowering the output volume. To avoid this, you can enable sound output on a single connector: just mount a **single** 0 ohm resistor depending on which slot you want to enable: R1 for CN2, R2 for CN3 and R3 for CN4.
 
 ### Standoffs
-I recommend mounting standoffs to keep the board straight: holes diameter is M2 and the recommended height is around 12 mm.
+I recommend mounting standoffs to keep the board straight: holes accept M2 screws and the recommended height is around 12 mm.
 
 ## Compatibility
 Of course, the new connector means losing compatibility with all the existing boards. While that might make the whole thing sound crazy, it is not as bad as it seems: in the past years I have redesigned most of the C16/+4 expansion boards that are still relevant, and released all of those with an open source license. Therefore, it is generally a quick and easy job to update them with the new connector and release 44-pin versions. I have already done it with the following:
