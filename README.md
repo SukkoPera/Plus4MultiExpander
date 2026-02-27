@@ -32,8 +32,8 @@ Very simply:
     
 This requires a simple AND gate (I used a common 74HCT08 logic chip to do that, whose spare gates were used to "buffer" some other signals). The original signals can be reconstructed as follows:
   
-    /C2_LO = /C2 OR /CS0
-    /C2_HI = /C2 OR /CS1
+    /C2_LO = /C2 or /CS0
+    /C2_HI = /C2 or /CS1
   
 ### Signal Reordering
 Another decision I had to take was whether to leave the signals in the +4 order or reorder them in C64 style: since now a C64 cartridge can be physically connected to a +4, I thought it would be appropriate to make that as safe as possible from the electrical point of view, so I went with the reordering.
@@ -49,6 +49,13 @@ The current board has no protection against these conflicts, so **never plug a C
 Since multiple audio cards might be plugged into the expander, sending their outputs to the `AUDIO_IN` pin, I added a passive mixer circuit to the expander.
 
 This is constituted by resistors R1/R2/R3 and unfortunately it might have the side effect of lowering the output volume. To avoid this, you can enable sound output on a single connector: just mount a **single** 0 ohm resistor depending on which slot you want to enable: R1 for CN2, R2 for CN3 and R3 for CN4.
+
+### Dimensions
+The board has been made as large as possible while still being cheap to manufacture (which implies a maximum size of 10x10 cm). I wanted to fit at least 3 connectors and the spacing among them should be enough for standard-size cartridges.
+
+If you have thicker cartridges, try putting them in the first or last slot, where you can probably gain some space by bending them slightly, or remove them from the case. Good-quality connectors will have no problems keeping them straight.
+
+Of course, feel free to fork the project and make a larger version and/or with more connectors.
 
 ### Standoffs
 I recommend mounting standoffs to keep the board straight: holes accept M2 screws and the recommended height is around 12 mm.
