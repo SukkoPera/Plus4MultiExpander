@@ -17,13 +17,13 @@ Significant inspiration for the design of the expander comes from Solder's 1994 
 ### Dropped Signals
 As mentioned, 50-44=6 pins need to be dropped from the original connector:
 - 3 are obvious, the unused pins: Z, AA, BB
-- Since it is basically impossible to make an external RAM expansion, two more obvious drops would be the pins for the `/RAS` and `/CAS` signals. Unfortunately, `/RAS` is used by the 1551 drive paddle to (re)generate `PHI2`, but I see no reason for that, as `PHI2` is directly available on the connector. But this is not enough of a reson to keep those signals, since in any case we will need to design a replacement paddle PCB with the new connector, we can also make it use that signal directly (This was even already done, as [TCBM2SD](https://github.com/ytmytm/plus4-tcbm2sd) can work as a 1551 paddle replacement and it doesn't need `/RAS`).
+- Since it is basically impossible to make an external RAM expansion, two more obvious drops would be the pins for the `/RAS` and `/CAS` signals. Unfortunately, `/RAS` is used by the 1551 drive paddle to (re)generate `PHI2`, but I see no reason for that, as `PHI2` is directly available on the connector. However, this is not enough of a reason to keep those signals: since in any case we will need to design a replacement paddle PCB with the new connector, we can also make it use that signal directly (This was even already done, as [TCBM2SD](https://github.com/ytmytm/plus4-tcbm2sd) can work as a 1551 paddle replacement and it doesn't need `/RAS`).
 - For the remaining pin, even if `MUX` seems to only make sense for RAM expansions, it cannot be dropped since it is used as a clock signal by [SIDcards](https://github.com/SukkoPera/ReSeed) (and by my upcoming DigiMoooZ as well).
 - After a long research, I rather decided to merge `/C2_LO` and `/C2_HI` into a single signal which I dubbed `/C2`. This seemed the best choice for a number or reasons:
   - Those signals are rarely used (I only know of [one cartridge](https://plus4world.powweb.com/sd.php?pid=14162) needing them).
   - When they are needed, they can sometimes be replaced by the new `/C2` signal.
   - If absolutely necessary, the original signals can be perfectly recreated very easily (see below).
-- While the same approach could apply to the `/C1_LO` and `/C1_HI` signals in order to spare yet one more pin, I opted not to do it, since these are much more frequently used and would require extra logic on every cartridge using them.
+- While the same approach could be applied to the `/C1_LO` and `/C1_HI` signals in order to spare yet one more pin, I opted not to do it, since these are much more frequently used and would require extra logic on every cartridge using them.
   
 ### Creation of /C2
 Very simply:
@@ -36,14 +36,14 @@ This requires a simple AND gate (I used a common 74HCT08 logic chip to do that, 
     /C2_HI = /C2 or /CS1
   
 ### Signal Reordering
-Another decision I had to take was whether to leave the signals in the +4 order or reorder them in C64 style: since now a C64 cartridge can be physically connected to a +4, I thought it would be appropriate to make that as safe as possible from the electrical point of view, so I went with the reordering.
+Another decision I had to take was whether to leave the signals in the +4 order or reorder them in C64 style: since now a C64 cartridge can be physically connected to a +4, I thought it would be appropriate to put some effort into making that a bit safer from the electrical point of view, so I went with the reordering.
 
 That left only three pins with possible conflicts:
-- Pin 12 outputs `MUX`, while on the C64 this is an input for `/DMA`.
-- Pin 22 outputs `AEC`, while on the C64 it is an input for `/GAME`.
+- Pin 13 outputs `MUX`, while on the C64 it is an input for `/DMA`.
+- Pin 8 outputs `AEC`, while on the C64 it is an input for `/GAME`.
 - Pin D outputs the new `/C2` signal, but on the C64 this pin is an input for the `/NMI` signal.
 
-The current board has no protection against these conflicts, so **never plug a C64 cartridge into the expander**. In a future version series resistors might be added to prevent any mishaps.
+Therefore, the current board is not completely safe in this regard, so **never plug a C64 cartridge into the expander**. In a future version series resistors might be added to prevent any mishaps.
 
 ### Audio Mixer
 Since multiple audio cards might be plugged into the expander, sending their outputs to the `AUDIO_IN` pin, I added a passive mixer circuit to the expander.
@@ -72,6 +72,9 @@ I have also made a 44-pin version of ytmytm's TCBM2SD.
 I will slowly port other projects to the new connector as I have a need for them, but feel free to send me a request if you want something particular to be done, or just fork the project and do it yourself! That's the whole point of open source stuff and, as I said, it is generally an easy job.
 
 In line of principle, it is also possible to make adapters between the two connectors, but of course the old-to-new variant is subject to the unavailability of the 50-pin connector. Nevertheless, I had [a go at it](https://github.com/SukkoPera/44to50).
+
+### LittleSixteen
+The [LittleSixteen project](https://github.com/SukkoPera/LittleSixteen) is planned to adopt the 44-pin connector in V5. 
 
 ## Releases
 If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/Plus4MultiExpander/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
