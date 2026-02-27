@@ -11,6 +11,7 @@ This problem with the unavailability of the connector also affects [LittleSixtee
 Of course, the opening on the case was made for the 44-pin 2.54 mm pitch connector the C64 uses, which for some reason is still available on the market, even from reliable manufacturers. It only has 6 pins less and since some of the pins on the 264 line are not used, I decided it was the best candidate for the new Expansion connector of the 264 line of computers.
 
 ## Design Notes
+### Bus Buffers
 Significant inspiration for the design of the expander comes from Solder's 1994 version. In particular, the expander integrates buffers for the address bus, in order to compensate for the increased bus capacitance. No buffers seem to be required on the data bus.
 
 ### Dropped Signals
@@ -44,11 +45,6 @@ That left only three pins with possible conflicts:
 
 The current board has no protection against these conflicts, so **never plug a C64 cartridge into the expander**. In a future version series resistors might be added to prevent any mishaps.
 
-## Releases
-If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/Plus4MultiExpander/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
-
-Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
-
 ### Audio Mixer
 Since multiple audio cards might be plugged into the expander, sending their outputs to the `AUDIO_IN` pin, I added a passive mixer circuit to the expander.
 
@@ -56,6 +52,11 @@ This is constituted by resistors R1/R2/R3 and unfortunately it might have the si
 
 ### Standoffs
 I recommend mounting standoffs to keep the board straight: holes diameter is M2 and the recommended height is around 12 mm.
+
+## Releases
+If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/Plus4MultiExpander/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
+
+Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
 
 ## License
 The Plus4MultiExpander documentation, including the design itself, is copyright &copy; SukkoPera 2023 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
