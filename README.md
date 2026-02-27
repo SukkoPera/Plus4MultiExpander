@@ -18,7 +18,7 @@ Significant inspiration for the design of the expander comes from Solder's 1994 
 As mentioned, 50-44=6 pins need to be dropped from the original connector:
 - 3 are obvious, the unused pins: Z, AA, BB
 - Since it is basically impossible to make an external RAM expansion, two more obvious drops would be the pins for the `/RAS` and `/CAS` signals. Unfortunately, `/RAS` is used by the 1551 drive paddle to (re)generate `PHI2`, but I see no reason for that, as `PHI2` is directly available on the connector. But this is not enough of a reson to keep those signals, since in any case we will need to design a replacement paddle PCB with the new connector, we can also make it use that signal directly (This was even already done, as [TCBM2SD](https://github.com/ytmytm/plus4-tcbm2sd) can work as a 1551 paddle replacement and it doesn't need `/RAS`).
-- For the remaining pin, even if `MUX` seems to only make sense for RAM expansions, it cannot be dropped since it is used as a clock signal by SIDcards (and by my upcoming DigiMoooZ as well).
+- For the remaining pin, even if `MUX` seems to only make sense for RAM expansions, it cannot be dropped since it is used as a clock signal by [SIDcards](https://github.com/SukkoPera/ReSeed) (and by my upcoming DigiMoooZ as well).
 - After a long research, I rather decided to merge `/C2_LO` and `/C2_HI` into a single signal which I dubbed `/C2`. This seemed the best choice for a number or reasons:
   - Those signals are rarely used (I only know of [one cartridge](https://plus4world.powweb.com/sd.php?pid=14162) needing them).
   - When they are needed, they can sometimes be replaced by the new `/C2` signal.
@@ -48,10 +48,23 @@ The current board has no protection against these conflicts, so **never plug a C
 ### Audio Mixer
 Since multiple audio cards might be plugged into the expander, sending their outputs to the `AUDIO_IN` pin, I added a passive mixer circuit to the expander.
 
-This is constituted by resistors R1/R2/R3 and unfortunately it might have the side effect of lowering the output volume. To avoid this, you can enable sound output on a single connector: just replace the above with a **single** 0 ohm resistor depending on which slot you want to enable: R1 for CN2, R2 for CN3 and R3 for CN4.
+This is constituted by resistors R1/R2/R3 and unfortunately it might have the side effect of lowering the output volume. To avoid this, you can enable sound output on a single connector: just mount a **single** 0 ohm resistor depending on which slot you want to enable: R1 for CN2, R2 for CN3 and R3 for CN4.
 
 ### Standoffs
 I recommend mounting standoffs to keep the board straight: holes diameter is M2 and the recommended height is around 12 mm.
+
+## Compatibility
+Of course, the new connector means losing compatibility with all the existing boards. While that might make the whole thing sound crazy, it is not as bad as it seems: in the past years I have redesigned most of the C16/+4 expansion boards that are still relevant, and released all of those with an open source license. Therefore, it is generally a quick and easy job to update them with the new connector and release 44-pin versions. I have already done it with the following:
+- OpenC16Cart
+- PlusVIA
+- ReSeed
+- SoundX
+
+I have also made a 44-pin version of ytmytm's TCBM2SD.
+
+I will slowly port other projects to the new connector as I have a need for them, but feel free to send me a request if you want something particular to be done, or just fork the project and do it yourself! That's the whole point of open source stuff and, as I said, it is generally an easy job.
+
+In line of principle, it is also possible to make adapters between the two connectors, but of course the old-to-new variant is subject to the unavailability of the 50-pin connector. Nevertheless, I had [a go at it](https://github.com/SukkoPera/44to50).
 
 ## Releases
 If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/Plus4MultiExpander/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
