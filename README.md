@@ -64,7 +64,7 @@ I recommend mounting standoffs to keep the board straight: holes accept M2 screw
 Of course, the new connector means losing compatibility with all the existing boards. While that might make the whole thing sound crazy, it is not as bad as it seems: in the past years I have redesigned most of the C16/+4 expansion boards that are still relevant, and released all of those with an open source license. Therefore, it is generally a quick and easy job to update them with the new connector and release 44-pin versions. I have already done it with the following:
 - OpenC16Cart
 - [PlusVIA](https://github.com/SukkoPera/PlusVIA/releases/tag/v2_44pin)
-- ReSeed
+- [ReSeed](https://github.com/SukkoPera/ReSeed/releases/tag/v2_44pin)
 - SoundX
 
 I have also made a 44-pin version of [ytmytm's TCBM2SD](https://github.com/SukkoPera/tcbm2sd-44pin).
