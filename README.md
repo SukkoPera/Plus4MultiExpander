@@ -67,7 +67,7 @@ Of course, the new connector means losing compatibility with all the existing bo
 - ReSeed
 - SoundX
 
-I have also made a 44-pin version of ytmytm's TCBM2SD.
+I have also made a 44-pin version of [ytmytm's TCBM2SD](https://github.com/SukkoPera/tcbm2sd-44pin).
 
 I will slowly port other projects to the new connector as I have a need for them, but feel free to send me a request if you want something particular to be done, or just fork the project and do it yourself! That's the whole point of open source stuff and, as I said, it is generally an easy job.
 
