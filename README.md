@@ -65,7 +65,7 @@ Of course, the new connector means losing compatibility with all the existing bo
 - OpenC16Cart
 - [PlusVIA](https://github.com/SukkoPera/PlusVIA/releases/tag/v2_44pin)
 - [ReSeed](https://github.com/SukkoPera/ReSeed/releases/tag/v2_44pin)
-- SoundX
+- [SoundX](https://github.com/SukkoPera/SoundX/releases/tag/v2_44pin)
 
 I have also made a 44-pin version of [ytmytm's TCBM2SD](https://github.com/SukkoPera/tcbm2sd-44pin).
 
