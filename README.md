@@ -100,4 +100,5 @@ You can also buy me a coffee if you want:
 <a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## Thanks
-* Solder of Synergy, for making the original splitter.
+* Solder of Synergy for making the original splitter.
+* Haegar of Synergy for help and assistance.
