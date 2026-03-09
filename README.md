@@ -1,4 +1,9 @@
 # Plus4MultiExpander
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/SukkoPera/Plus4MultiExpander)
+![GitHub Release Date](https://img.shields.io/github/release-date/SukkoPera/Plus4MultiExpander?color=blue&label=last%20release)
+![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/SukkoPera/Plus4MultiExpander/latest?color=orange)
+
 Plus4MultiExpander is a port expander that allows multiple boards to be connected to the Expansion port of a Commodore 16, 116 and Plus/4.
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/Plus4MultiExpander/master/img/render-top.png)
