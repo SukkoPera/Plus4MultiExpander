@@ -72,7 +72,7 @@ Of course, the new connector means losing compatibility with all the existing bo
 - [ReSeed](https://github.com/SukkoPera/ReSeed/releases/tag/v2_44pin)
 - [SoundX](https://github.com/SukkoPera/SoundX/releases/tag/v2_44pin)
 
-I have also made 44-pin versions of:
+I have also made 44-pin versions of open-source projects from other authors:
 - [ytmytm's TCBM2SD](https://github.com/SukkoPera/tcbm2sd-44pin)
 - [Marko Šolajić's C264 Magic Cart](https://github.com/SukkoPera/c264-magic-cart-44pin)
 
